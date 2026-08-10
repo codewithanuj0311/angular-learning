@@ -1,1 +1,33 @@
-<app-myContainer></app-myContainer>
+<!-- <app-myContainer></app-myContainer> -->
+
+<!-- <app-databind></app-databind> -->
+
+<!-- <app-class-style></app-class-style> -->
+
+<!-- <app-eventbind>
+</app-eventbind> -->
+
+<!-- <app-two-way-bind></app-two-way-bind> -->
+
+<!-- <app-ngif></app-ngif> -->
+
+<!-- <app-ng-switch></app-ng-switch> -->
+
+<!-- <app-ng-for></app-ng-for> -->
+
+<header>
+    <nav>
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a routerLink="/" class="nav-link"  routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+            <li class="nav-item"><a routerLink="about" class="nav-link" routerLinkActive="active">About Us</a></li>
+            <li class="nav-item"><a routerLink="contact" class="nav-link" routerLinkActive="active">Contact</a></li>
+            <li class="nav-item"><a routerLink="contact2" class="nav-link" routerLinkActive="active">Contact2</a></li>
+            <li class="nav-item"><a routerLink="product" class="nav-link" routerLinkActive="active">Product</a></li>
+            <li class="nav-item"><a routerLink="api" class="nav-link" routerLinkActive="active">API Table</a></li>
+            <li class="nav-item"><a routerLink="buy-products" routerLinkActive="active" class="nav-link">Buy Products</a></li>
+        </ul>
+    </nav>
+</header>
+
+<router-outlet></router-outlet>
