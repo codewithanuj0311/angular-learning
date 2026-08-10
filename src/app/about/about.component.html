@@ -1,0 +1,40 @@
+<div class="col-md-16" style="background-color: aliceblue; width: 60%; margin: auto;">
+    <h2 class="text-center">About Us</h2>
+    <!-- <p class="text-red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam qui deleniti accusantium dicta
+        laborum tempora dolore eos asperiores id at.</p> -->
+    <!-- <app-ng-for></app-ng-for> -->
+    <!-- <h4 class="text-center">{{value | testPipe:10}}</h4> -->
+    <!-- <h5  class="text-center">{{date | date}}</h5> -->
+
+   <div class="row justify-content-center">
+    <div class="col-md-4">
+        <input type="text" class="form-control" placeholder="Enter to add.." #value>
+        <button class="btn btn-success" (click)="addPro(value.value)">Add</button>
+    </div>
+    <div class="col-md-8">
+        <div class="mb-3 form-control">
+            <input type="search" class="form-control" id="search" placeholder="Type here to Search" [(ngModel)]='nameSearch'>
+          </div>
+    </div>
+    <div class="col-md-8">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Availability</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of products | filter:nameSearch; index as i">
+                <th scope="row">{{i+1}}</th>
+                <td>{{item.productName}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.availability}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+   </div>
+</div>
