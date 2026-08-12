@@ -1,0 +1,70 @@
+.product-wrapper {
+    padding: 30px 45px 45px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+  }
+  
+  .page-title {
+    color: #0878d1;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  
+  .section-title {
+    color: #0878d1;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 32px;
+  }
+  
+  .form-label {
+    color: #555;
+    margin-bottom: 6px;
+  }
+  
+  .form-control {
+    height: 35px;
+    border-radius: 2px;
+  }
+  
+  .form-control:focus {
+    border-color: #0878d1;
+    box-shadow: 0 0 0 0.15rem rgba(8, 120, 209, 0.15);
+  }
+  
+  .product-table {
+    margin-top: 32px;
+  }
+  
+  .product-table thead th {
+    background-color: #212529;
+    color: #fff;
+    border: none;
+    padding: 9px 10px;
+    font-size: 14px;
+  }
+  
+  .product-table tbody td,
+  .product-table tbody th {
+    padding: 8px 10px;
+    vertical-align: middle;
+    color: #555;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .product-table tbody tr:hover {
+    background-color: #f1f3f5;
+  }
+  
+  .btn-delete {
+    border: none;
+    background: transparent;
+    padding: 2px 6px;
+    font-size: 15px;
+  }
+  
+  .btn-delete:hover {
+    background-color: #ffe5e5;
+  }
