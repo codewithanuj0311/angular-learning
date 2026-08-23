@@ -1,0 +1,92 @@
+<div class="col-md-12" style="background-color: orange; width: 60%; margin: auto;">
+    <h2 class="text-center">Contact</h2>
+    <p class="text-red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam qui deleniti accusantium dicta
+        laborum tempora dolore eos asperiores id at.</p>
+    <div class="row justify-content-center">
+        <div class="col-md-6 bg-white rounded shadow py-3 px-5">
+
+
+            <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+                <div ngModelGroup="userDetails" #userDetails="ngModelGroup">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username*</label>
+                        <input type="text" class="form-control" required id="username" placeholder="Enter username"
+                            name="username" ngModel #username="ngModel">
+                            <span *ngIf="username.invalid && username.touched">Username is required</span>
+                    </div>
+                    <button class="btn btn-success" (click)="addUsername()">Add User</button>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email*</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" ngModel
+                            required email #email="ngModel">
+                            <span *ngIf="email.invalid && email.touched">Please enter a valid email</span>
+                    </div>
+                </div>
+                <div class="mb-3 ">
+                    <label class="form-label" for="selectCourse">Select Course</label>
+                    <select class="form-control" id="selectCourse" name="course" [ngModel]="selectedCourse">
+                        <option value="Angular">Angular</option>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JS">JS</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div class="form-check" *ngFor="let gender of genders">
+                        <input class="form-check-input" type="radio" name="gender" 
+                        id="{{gender.id}}" [ngModel]="defaultGender" value="{{gender.value}}">
+                        <label class="form-check-label" for="{{gender.id}}">
+                          {{gender.value}}
+                        </label>
+                      </div>
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
+            </form>
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="row">
+                <app-card>
+                </app-card>
+            </div> -->
+            <!-- <div class="row">
+                <app-card2>
+                    <h5 class="card-title">Mobile</h5>
+                    <button class="btn btn-primary" (click)="msgAlert()">Buy Mobile</button>
+                </app-card2>
+            </div> -->
+            <!-- <div class="row">
+                <app-card>
+                    <h5 class="card-title">Television</h5>
+                    <button class="btn btn-primary">Buy Television</button>
+                </app-card>
+            </div>
+            <div class="row">
+                <app-card>
+                    <h5 class="card-title">washing Machine</h5>
+                    <button class="btn btn-primary">Buy washing Machine</button>
+                </app-card>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="row" *ngIf="submitedForm">
+        <div class="col-md-6 bg-white rounded shadow">
+            <h2>User form Data</h2>
+            <p>Username: <strong>{{formData.username}}</strong></p>
+            <p>Email: <strong>{{formData.email}}</strong></p>
+            <p>Gender: <strong>{{formData.gender}}</strong></p>
+            <p>Course: <strong>{{formData.course}}</strong></p>
+        </div>
+    </div>
+
+</div>
