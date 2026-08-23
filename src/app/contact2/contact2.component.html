@@ -1,0 +1,61 @@
+<div class="col-md-12" style="background-color: orange; width: 60%; margin: auto;">
+    <h2 class="text-center">Contact</h2>
+    <p class="text-red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam qui deleniti accusantium dicta
+        laborum tempora dolore eos asperiores id at.</p>
+    <div class="row justify-content-center">
+        <div class="col-md-6 bg-white rounded shadow py-3 px-5">
+
+
+            <form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
+                <div formGroupName="userDetails">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username*</label>
+                        <input type="text" class="form-control" required id="username"
+                         placeholder="Enter username" formControlName="username">
+                         <div *ngIf="!myReactiveForm.get('userDetails.username')?.valid && 
+                         myReactiveForm.get('userDetails.username')?.touched">
+                            <span *ngIf="myReactiveForm.get('userDetails.username')?.errors?.['required']">Username is required</span>
+                            <span *ngIf="myReactiveForm.get('userDetails.username')?.errors?.['notAllowedName']">Username is not accepted</span>
+                         </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email*</label>
+                        <input type="email" class="form-control" id="email" 
+                        placeholder="Enter email" formControlName="email">
+                        <span *ngIf="!myReactiveForm.get('userDetails.email')?.valid && 
+                        myReactiveForm.get('userDetails.email')?.touched">Please enter valid email</span>
+                    </div>
+                </div>
+            
+                <div class="mb-3 ">
+                    <label class="form-label" for="selectCourse">Select Course</label>
+                    <select class="form-control" id="selectCourse" formControlName="course">
+                        <option value="Angular">Angular</option>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JS">JS</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check" *ngFor="let gender of genders">
+                        <input class="form-check-input" type="radio" formControlName="gender" id="{{gender.id}}" value="{{gender.value}}">
+                        <label class="form-check-label" for="{{gender.id}}">
+                            {{gender.value}}
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-3" formArrayName="skills">
+                    <ng-container *ngFor="let skill of skills.controls; index as i">
+                        <input type="text" class="form-control" required id="skills"
+                     placeholder="Enter username" formControlName="{{i}}">
+                    </ng-container>
+                     <button class="btn btn-success" type="button" (click)="reset()">Add</button>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+</div>
