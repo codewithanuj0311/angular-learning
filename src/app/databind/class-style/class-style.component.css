@@ -1,0 +1,12 @@
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: antiquewhite;
+}
+
+.class1 {
+    width: 200px;
+    margin-top: 20px;
+    height: 200px;
+    background-color: beige;
+}
