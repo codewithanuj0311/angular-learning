@@ -1,0 +1,52 @@
+<div class="container py-5" appTestDirective>
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-md-10">
+  
+        <div class="card shadow-lg border-0 rounded-4">
+  
+          <!-- Header -->
+          <div class="card-header text-white text-center py-3" #box>
+            <h2 class="mb-1">Angular Service Demo</h2>
+            <p class="mb-0">
+              Logged in as
+              <strong class="text-warning">{{username}}</strong>
+            </p>
+          </div>
+
+          <button (click)="changeChildProp()" appTestDirective>Change Child Prop</button>
+          <button (click)="changeChildMethod()">Change Child Method</button>
+  
+          <!-- Body -->
+          <div class="card-body p-4">
+  
+            <!-- <div class="mb-4">
+              <app-comp1></app-comp1>
+            </div> -->
+  
+            <hr>
+  
+            <div class="my-4">
+              <app-comp2>
+                <p #childPara>This is ng content</p>
+              </app-comp2>
+            </div>
+  
+            <!-- <hr>
+  
+            <div class="my-4">
+              <app-comp3></app-comp3>
+            </div> -->
+  
+            <!-- <hr>
+  
+            <div class="mt-4">
+              <app-comp4></app-comp4>
+            </div> -->
+  
+          </div>
+  
+        </div>
+  
+      </div>
+    </div>
+  </div>
