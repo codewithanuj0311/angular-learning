@@ -1,0 +1,51 @@
+
+
+<!-- <div class="container">
+    <div class="col-md-12">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Sr No.</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pro of products; index as i">
+                    <td># {{i+1}}</td>
+                    <td>{{pro.name}}</td>
+                    <td>{{pro.age}}</td>
+                    <td>{{pro.gender}}</td>
+                </tr>
+            </tbody>
+            
+        </table>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <input type="text" name="name" id="name" placeholder="Enter Name" #name>
+            <button class="btn btn-success" (click)="addUser(name.value)">Create User</button>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let val of username; index as i">
+                    <td>{{val.name}}</td>
+                    <button class="btn btn-danger" (click)="deleteUser(i)">Delete User</button>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
