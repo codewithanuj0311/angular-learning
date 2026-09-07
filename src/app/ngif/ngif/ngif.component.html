@@ -1,0 +1,8 @@
+<div class="container">
+    <button class="btn btn-success" (click)="myClick()">Click Me</button>
+    <br><br>
+    <div *ngIf="isClicked; else elseBlock">you have clicked me!</div>
+    <ng-template #elseBlock>
+        <p class="red">Block is not created!</p>
+    </ng-template>
+</div>
