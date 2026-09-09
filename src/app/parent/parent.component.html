@@ -1,0 +1,56 @@
+<div class="col-md-12" style="background-color: rgb(217, 219, 222); width: 80%; margin: auto;">
+    <h2 class="text-center"> Buy Products</h2>
+    <div class="row">
+        <div class="justify-content-between d-flex alert alert-light" *ngIf="addedProduct">
+            <p><strong class="text-success">{{addedProduct}}</strong> is added to cart!</p>
+            <button class="btn btn-success">Checkout</button>
+        </div>
+        <div class="col-md-12 mt-20">
+            <!-- card-html -->
+
+            <div class="d-flex justify-content-around">
+
+                <div class="card" style="width: 20rem;">
+                    <img src="../../assets/images/laptop.jpg" class="card-img-top" alt="Laptop image" width="100%"
+                        height="100%">
+                    <div class="card-body">
+                        <h5 class="card-title" >Laptop</h5>
+                        <button  class="btn btn-primary" (click)="onProductSelection('Laptop')">Select this Product</button>
+                    </div>
+                </div>
+
+
+                <div class="card" style="width: 20rem;">
+                    <img src="../../assets/images/washing-machine.jpg" class="card-img-top" alt="washing-machine image"
+                        width="100%" height="100%">
+                    <div class="card-body">
+                        <h5 class="card-title" >Washing machine</h5>
+                        <button  class="btn btn-primary"  (click)="onProductSelection('Washing Machine')">Select this Product</button>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 20rem;">
+                    <img src="../../assets/images/mobile.jpg" class="card-img-top" alt="Mobile image" width="100%"
+                        height="100%" style="max-height: 200px;">
+                    <div class="card-body">
+                        <h5 class="card-title" >Mobile</h5>
+                        <button class="btn btn-primary"  (click)="onProductSelection('Mobile')">Select this Product</button>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 20rem;">
+                    <img src="../../assets/images/tv.jpg" class="card-img-top" alt="Tv image" width="100%"
+                        height="100%">
+                    <div class="card-body">
+                        <h5 class="card-title" >Television</h5>
+                        <button  class="btn btn-primary"  (click)="onProductSelection('Television')">Select this Product</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <app-child [selectProduct]="selectedProduct" 
+        [productSelected]="productSelected" 
+        (productName)="addToCart($event)"></app-child>
+    </div>
+</div>
