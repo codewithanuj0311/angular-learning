@@ -1,0 +1,62 @@
+<div class="col-md-12" style="background-color: rgb(93, 166, 244); width: 80%; margin: auto;">
+    <h2 class="text-center">Products</h2>
+    <p class="text-red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam qui deleniti accusantium dicta
+        laborum tempora dolore eos asperiores id at.</p>
+    <div class="row">
+        <div class="col-md-8">
+            <!-- card-html -->
+
+            <div class="d-flex justify-content-between">
+
+                <div class="card" style="width: 20rem;" appTestDirective>
+                    <img src="../../assets/images/laptop.jpg" class="card-img-top" alt="Laptop image" width="100%"
+                        height="100%">
+                    <div class="card-body">
+                        <h5 class="card-title">Laptop</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card’s content.</p>
+                        <a routerLink="laptop" class="btn btn-primary">Buy Laptop</a>
+                    </div>
+                </div>
+
+
+                <div class="card" style="width: 20rem;" appTestDirective>
+                    <img src="../../assets/images/washing-machine.jpg" class="card-img-top" alt="washing-machine image"
+                        width="100%" height="100%">
+                    <div class="card-body">
+                        <h5 class="card-title">Washing machine</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card’s content.</p>
+                        <a routerLink="washing-machine" class="btn btn-primary">Buy Washing machine</a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 20rem;" appTestDirective>
+                    <img src="../../assets/images/mobile.jpg" class="card-img-top" alt="Mobile image" width="100%"
+                        height="100%">
+                    <div class="card-body">
+                        <h5 class="card-title">Mobile</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card’s content.</p>
+                        <a routerLink="mobile" class="btn btn-primary">Buy Mobile</a>
+                    </div>
+                </div>
+
+                <div class="card" style="width: 20rem;" appTestDirective>
+                    <img src="../../assets/images/tv.jpg" class="card-img-top" alt="Tv image" width="100%"
+                        height="100%">
+                    <div class="card-body">
+                        <h5 class="card-title">TV</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card’s content.</p>
+                        <a routerLink="television" class="btn btn-primary">Buy TV</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
